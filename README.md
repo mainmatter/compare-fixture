@@ -63,5 +63,5 @@ thing.js is different in the fixture 🚨
 
 And if your terminal supports colours it will output the diff with colours: 
 
-
+<img width="715" alt="Screenshot 2023-03-19 at 16 25 18" src="https://user-images.githubusercontent.com/594890/226189889-3151b7fb-dbf6-4889-8b22-46b58dea26d6.png">
 
