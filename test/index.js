@@ -3,8 +3,14 @@ import { expect } from 'chai';
 
 describe('compare fixture command', function() {
   it('outputs the differences correctly', async function() {
-    const { stdout } = await execaNode('./index.js', ['test/fixtures/one', 'test/fixtures/two']);
-    expect(stdout).to.equal(`thing.js is different in the fixture 🚨
+    try {
+       await execaNode('./index.js', ['test/fixtures/one', 'test/fixtures/two']);
+    } catch (err) {
+      const { stdout, exitCode } = err;
+
+      expect(exitCode).to.equal(1);
+
+      expect(stdout).to.equal(`thing.js is different in the fixture 🚨
 
       + expected - actual
 
@@ -34,6 +40,9 @@ describe('compare fixture command', function() {
       -function possiblyMissing() {
       -  console.log('a very important function');
       -}
-      `);
+      
+Differences were found in the fixture files!`);
+    }
+    
   })
 })
