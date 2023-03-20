@@ -19,12 +19,20 @@ if (!comparisonDir) {
 
 const fixtureFiles = walkSync(fixtureDir, { directories: false });
 
+let foundErrors = false;
+
 fixtureFiles.forEach((file) => {
   const compareFile = readFileSync(join(comparisonDir, file), 'utf8');
   const fixtureFile = readFileSync(join(fixtureDir, file), 'utf8');
 
   if (compareFile != fixtureFile) {
+    foundErrors = true;
     console.log(`${file} is different in the fixture 🚨`);
     console.log(generateDiff(compareFile, fixtureFile));
   }
 })
+
+if (foundErrors) {
+  console.log('Differences were found in the fixture files!');
+  process.exit(1);
+}
