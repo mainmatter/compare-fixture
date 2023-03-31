@@ -4,7 +4,7 @@ This is a super simple tool to compare two folders. It is intended to be used to
 
 ## Installation
 
-You can use this tool directly with npx and not install it as follows: 
+You can use this tool from the command line directly with npx and not install it as follows: 
 
 ```
 npx compare-fixture
@@ -18,6 +18,10 @@ npm i --save-dev compare-fixture
 
 ## Usage
 
+This tool was initially created to be a simple command line comparison between folders. You can also import it to use in your tests directly.
+
+### Command Line
+
 ```
 npx compare-fixture <fixture folder> <comaprison folder>
 ```
@@ -25,6 +29,23 @@ npx compare-fixture <fixture folder> <comaprison folder>
 This will test each file in `<fixture folder>` against each corresponding file in the `<comparison folder>` 
 
 **Note:** if any extra files exist in `<comparison folder>` that is **not considered an error**. This allows you to easily test a sub-section of your files with a sparse fixture. On the other hand, if a file exists in the fixture but is missing in the comparison folder then that is considered an error.
+
+### Node
+
+```js
+import { makeAmazingStuff } from '../my-library';
+import compareFixture from 'compare-fixture';
+
+describe("amazing fixtures", function() {
+  it("can save the world", async function() {
+    await makeAmazingStuff
+
+    compareFixture('./test/fixtures/expected-stuff', './output');
+  })
+})
+```
+
+The semantics and the console output is the same as the CLI version
 
 ## Example output
 
