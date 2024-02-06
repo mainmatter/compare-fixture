@@ -20,7 +20,7 @@ npm i --save-dev compare-fixture
 
 This tool was initially created to be a simple command line comparison between folders. You can also import it to use in your tests directly.
 
-### Command Line
+### Command Line
 
 ```
 npx compare-fixture <fixture folder> <comaprison folder>
