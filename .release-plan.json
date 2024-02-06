@@ -2,16 +2,16 @@
   "solution": {
     "compare-fixture": {
       "impact": "patch",
-      "oldVersion": "1.1.0",
-      "newVersion": "1.1.1",
+      "oldVersion": "1.1.1",
+      "newVersion": "1.1.2",
       "constraints": [
         {
           "impact": "patch",
-          "reason": "Appears in changelog section :house: Internal"
+          "reason": "Appears in changelog section :bug: Bug Fix"
         }
       ],
       "pkgJSONPath": "./package.json"
     }
   },
-  "description": "## Release (2024-02-06)\n\ncompare-fixture 1.1.1 (patch)\n\n#### :house: Internal\n* `compare-fixture`\n  * [#7](https://github.com/mainmatter/compare-fixture/pull/7) setup release-plan ([@mansona](https://github.com/mansona))\n  * [#8](https://github.com/mainmatter/compare-fixture/pull/8) only update npm on CI if using older node versions ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+  "description": "## Release (2024-02-06)\n\ncompare-fixture 1.1.2 (patch)\n\n#### :bug: Bug Fix\n* `compare-fixture`\n  * [#10](https://github.com/mainmatter/compare-fixture/pull/10) fix npx usage ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
 }
