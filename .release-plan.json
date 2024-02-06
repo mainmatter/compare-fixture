@@ -1,0 +1,17 @@
+{
+  "solution": {
+    "compare-fixture": {
+      "impact": "patch",
+      "oldVersion": "1.1.0",
+      "newVersion": "1.1.1",
+      "constraints": [
+        {
+          "impact": "patch",
+          "reason": "Appears in changelog section :house: Internal"
+        }
+      ],
+      "pkgJSONPath": "./package.json"
+    }
+  },
+  "description": "## Release (2024-02-06)\n\ncompare-fixture 1.1.1 (patch)\n\n#### :house: Internal\n* `compare-fixture`\n  * [#7](https://github.com/mainmatter/compare-fixture/pull/7) setup release-plan ([@mansona](https://github.com/mansona))\n  * [#8](https://github.com/mainmatter/compare-fixture/pull/8) only update npm on CI if using older node versions ([@mansona](https://github.com/mansona))\n\n#### Committers: 1\n- Chris Manson ([@mansona](https://github.com/mansona))\n"
+}
