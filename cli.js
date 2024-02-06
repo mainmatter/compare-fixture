@@ -1,4 +1,6 @@
-import compareFixture from ".";
+#!/usr/bin/env node
+
+import compareFixture from "./index.js";
 
 const fixtureDir = process.argv[2];
 const comparisonDir = process.argv[3];
