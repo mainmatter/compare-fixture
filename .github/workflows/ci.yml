@@ -13,7 +13,7 @@ jobs:
 
     strategy:
       matrix:
-        node-version: [14.x, 16.x, 18.x]
+        node-version: [14.x, 16.x, 18.x, 20.x]
       fail-fast: false
 
     steps:
@@ -21,6 +21,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-      - run: npm i -g npm@latest
+      - run: npm i -g npm@8
+        if: ${{ matrix.node-version == '14.x' || matrix.node-version == '16.x' }} 
       - run: npm ci
       - run: npm test
